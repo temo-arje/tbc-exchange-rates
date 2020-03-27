@@ -1,0 +1,26 @@
+{
+    "name": "ardogital/tbc-exchange-rates",
+    "description": "Tbc Bank Commercial Exchange Rates For Georgian Lari",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Temo Arjevanidze",
+            "email": "35239361+temo-arje@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ArDigital\\TbcExchangeRates" : "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ArDigital\\TbcExchangeRates\\TbcExchangeRatesServiceProvider"
+            ]
+        }
+    }
+}
