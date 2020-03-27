@@ -9,8 +9,10 @@
             "email": "arjevanidzetemo@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "php": ">=7.2.0",
+        "laravel/framework": "^7.0"
+    },
     "autoload": {
         "psr-4": {
             "ArDigital\\TbcExchangeRates\\" : "src/"
@@ -22,5 +24,6 @@
                 "ArDigital\\TbcExchangeRates\\TbcExchangeRatesServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
