@@ -7,13 +7,16 @@ use Exception;
 
 class TbcExchangeRates
 {
+    
+    const apiUrl = "https://api.tbcbank.ge";
+
     public static function ResultLis($currency = '')
     {
         $response = Http::withOptions([
             'verify' => config('tbcexchange.verify')
         ])->withHeaders([
             'ApiKey' => config('tbcexchange.api_key')
-        ])->get('https://test-api.tbcbank.ge/v1/exchange-rates/commercial', ['currency' => (string) $currency]);
+        ])->get(self::apiUrl.'/v1/exchange-rates/commercial', ['currency' => (string) $currency]);
         if ($response->ok()) {
             return $response->json();
         } else {
@@ -26,7 +29,7 @@ class TbcExchangeRates
             'verify' => config('tbcexchange.verify')
         ])->withHeaders([
             'ApiKey' => config('tbcexchange.api_key')
-        ])->get('https://test-api.tbcbank.ge/v1/exchange-rates/commercial/convert', ['amount' =>  $amount, 'from' => $from, 'to' => $to]);
+        ])->get(self::apiUrl.'/v1/exchange-rates/commercial/convert', ['amount' =>  $amount, 'from' => $from, 'to' => $to]);
         return $response->json();
     }
 
