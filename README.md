@@ -51,7 +51,7 @@ use ArDigital\TbcExchangeRates\TbcExchangeRates;
 
 public function getCurrency(){
  TbcExchangeRates::ResultLis(); // Return All currency
- TbcExchangeRates::ResultList('USD'); // Return Usd currency USD buy and sell
+ TbcExchangeRates::ResultLists('USD'); // Return Usd currency USD buy and sell
 }
 OR:
 public function Convert(){
