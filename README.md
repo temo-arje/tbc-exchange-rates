@@ -14,7 +14,7 @@ This package allows you   Exchange Rates  with TbcBank   API
 composer require ardigital/tbc-exchange-rates
 ```
 
-#### For Laravel <= 7.0
+#### For Laravel >= 7.0
 
 Open `config/app.php` and add `TbcExchangeRatesServiceProvider` to the `providers` array.
 
