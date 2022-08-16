@@ -50,8 +50,8 @@ In `TbcExchangeRates` class, add `ResultLis()` method and return currency
 use ArDigital\TbcExchangeRates\TbcExchangeRates;
 
 public function getCurrency(){
- TbcExchangeRates::ResultLis(); // Return All currency
- TbcExchangeRates::ResultLists('USD'); // Return Usd currency USD buy and sell
+ TbcExchangeRates::get(); // Return All currency
+ TbcExchangeRates::get('USD'); // Return Usd currency USD buy and sell
 }
 OR:
 public function Convert(){
