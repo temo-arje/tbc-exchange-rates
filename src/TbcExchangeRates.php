@@ -10,7 +10,7 @@ class TbcExchangeRates
     
     const apiUrl = "https://api.tbcbank.ge";
 
-    public static function ResultLis($currency = '')
+    public static function get($currency = '')
     {
         $response = Http::withOptions([
             'verify' => config('tbcexchange.verify')
